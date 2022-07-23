@@ -1,0 +1,121 @@
+.post-header {
+    background-color: var(--primary-color);
+    color: var(--primary-bg-color);
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 1rem;
+    @include mx(0.5rem);
+    @include py(1rem);
+    @include px(1rem);
+    @include shadow;
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__tag-color {
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+    &__tag-name {
+        font-size: $text-xs;
+        a {
+            color: var(--primary-bg-color);
+        }
+    }
+    &__date {
+        margin-left: auto;
+        font-size: $text-xs;
+        @include my(0);
+    }
+
+    &__title {
+        @include my(0.5rem);
+        color: var(--primary-bg-color);
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__author-image {
+        border-radius: 50%;
+        height: 2rem;
+        margin-right: 0.5rem;
+        object-fit: contain;
+        object-position: center;
+    }
+    &__author-name {
+        @include my(0);
+        font-size: $text-sm;
+        a {
+            color: var(--primary-bg-color);
+        }
+    }
+}
+
+.post-main {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    @include mx(0.5rem);
+    @include shadow;
+
+    &__content {
+        @include py(1rem);
+        @include px(1rem);
+        border-radius: 20px 20px 0px 0px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+    &__comments {
+        @include py(1rem);
+        @include px(1rem);
+        border-radius: 0px 0px 20px 20px;
+        background-color: var(--primary-color);
+        color: var(--primary-bg-color);
+    }
+    &__comments-title {
+        color: var(--primary-bg-color);
+        @include my(0.25rem);
+    }
+}
+
+.post-single {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    @include mx(0.5rem);
+    @include shadow;
+    @include py(1rem);
+    @include px(1rem);
+}
+
+.post-related {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include px(0.5rem);
+    &__header {
+        margin-right: 0.5rem;
+    }
+    &__tag-color {
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+    &__tag-description {
+
+    }
+}
