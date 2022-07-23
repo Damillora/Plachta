@@ -1,15 +1,29 @@
 <script lang="ts">
-	export let searchValue = "";
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	const doSearch = (event: any) => {
+		dispatch('search', {
+			query: event.target.value
+		});
+	};
 </script>
 
 <li class="nav-search">
-	<input class="nav-search-box" type="text" name="search" id="search-query" bind:value={searchValue} />
+	<input
+		class="nav-search-box"
+		type="text"
+		name="search"
+		id="search-query"
+		on:input={doSearch}
+	/>
 	<span class="material-icons nav-search-icon"> search </span>
 </li>
 
 <style lang="scss">
-    @import "../../styles/global";
-    
+	@import '../../styles/global';
+
 	.nav-search {
 		position: relative;
 		height: 2.5rem;

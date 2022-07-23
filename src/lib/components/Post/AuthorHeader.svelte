@@ -22,10 +22,10 @@
 				<span class=""><a href={website} target="_blank" rel="noopener">Website</a></span>
 			{/if}
 			{#if twitter}
-				<span class=""><a href={twitter} target="_blank" rel="noopener">Twitter</a></span>
+				<span class=""><a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener">Twitter</a></span>
 			{/if}
 			{#if facebook}
-				<span class=""><a href={facebook} target="_blank" rel="noopener">Facebook</a></span>
+				<span class=""><a href={`${facebook}`} target="_blank" rel="noopener">Facebook</a></span>
 			{/if}
 		</p>
 	</div>

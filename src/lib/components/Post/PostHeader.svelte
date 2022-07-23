@@ -13,9 +13,7 @@
 		| undefined = undefined;
 	export let date: string = '';
 	export let reading_time = '';
-	export let url = '';
-	export let excerpt = '';
-	export let authors: { profile_image: string; url: string; name: string }[] = [];
+	export let authors: { profile_image: string; url: string; name: string }[] | null = null;
 </script>
 
 <PageHeader>

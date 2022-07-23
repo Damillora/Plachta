@@ -1,34 +1,11 @@
 <script lang="ts">
-    export let background = "";
-    export let alt = "";
-
+	export let background = '';
+	export let alt = '';
 </script>
 
-<style lang="scss">
-    @import "../../styles/global";
-    
-        .hero {
-        min-height: 150px;
-        height: 25vh;
-        z-index: 10;
-    
-        @include screen(md) {
-            height: 40vh;
-            min-height: 300px;
-        }
-    
-        &__img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-    }
-    </style>
-    
 <div class="hero">
-    <img class="hero__img" src={background} alt={alt} loading="lazy">
-<!-- 
+	<img class="hero__img" src={background} {alt} loading="lazy" />
+	<!-- 
     {{#if background}} <img class="hero__img" srcset="{{img_url
         background size="s" }}
         300w, {{img_url
@@ -44,3 +21,25 @@
 
     {{/if}} -->
 </div>
+
+<style lang="scss">
+	@import '../../styles/global';
+
+	.hero {
+		min-height: 150px;
+		height: 25vh;
+		z-index: 10;
+
+		@include screen(md) {
+			height: 40vh;
+			min-height: 300px;
+		}
+
+		&__img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+</style>

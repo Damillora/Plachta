@@ -225,9 +225,9 @@
 		<PostCard
 			authors={[
 				{
-					profile_image: 'https://images.nanao.moe/r/GDuirR.jpg',
-					url: '/examples/post-page',
-					name: 'Sophie Neuenmuller'
+					"name": "Damillora",
+					"profile_image": "https://blog.nanao.moe/content/images/2021/09/special_01_01.jpg",
+					"url": "https://blog.nanao.moe/author/damillora/"
 				}
 			]}
 			date="2022 November 2020"
