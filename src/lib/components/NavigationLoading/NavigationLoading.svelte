@@ -34,7 +34,7 @@
 		&__contents {
 			color: var(--primary-color);
 			position: fixed;
-			bottom: -60vh;
+			bottom: 40vh;
 			width: 100vw;
 			font-size: $text-4xl;
 			margin-left: auto;
@@ -46,7 +46,7 @@
 		&__loading {
 			background-color: var(--primary-color);
 			position: fixed;
-			bottom: -50vh;
+			bottom: 50vh;
 			width: 2rem;
 			height: 2rem;
 			left: 30vw;
