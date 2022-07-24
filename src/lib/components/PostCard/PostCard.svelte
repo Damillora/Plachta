@@ -97,9 +97,6 @@
 	@import '../../styles/global';
 
 	.post-card {
-		border-radius: 20px;
-		@include shadow;
-		margin-bottom: 2rem;
 		display: grid;
 		grid-template-rows: 150px 1fr;
 		grid-template-columns: 1fr;
