@@ -1,4 +1,6 @@
 <script>
+	import { navigating } from '$app/stores';
+
 	import Base from '$lib/components/Base/Base.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
 	import Header from '$lib/components/Header/Header.svelte';
@@ -7,6 +9,10 @@
 	import NavDarkMode from '$lib/components/Nav/NavDarkMode.svelte';
 	import NavMenu from '$lib/components/Nav/NavMenu.svelte';
 	import NavSearch from '$lib/components/Nav/NavSearch.svelte';
+	import NavigationLoading from '$lib/components/NavigationLoading/NavigationLoading.svelte';
+
+	let loading = true;
+	navigating.subscribe((x) => (loading = x != null));
 </script>
 
 <Base>
@@ -14,12 +20,11 @@
 		<svelte:fragment slot="title">
 			<a href="/"> Plachta Theme Kit </a>
 		</svelte:fragment>
-        <svelte:fragment slot="nav">
+		<svelte:fragment slot="nav">
 			<NavMenu label="Home" url="/" />
 			<NavDarkMode />
 			<NavSearch />
-
-        </svelte:fragment>
+		</svelte:fragment>
 	</Header>
 	<Hero background="https://images.nanao.moe/r/7jETH3.png" />
 
@@ -28,3 +33,5 @@
 		<p>Copyright (c) 2021 Damillora</p>
 	</Footer>
 </Base>
+
+<NavigationLoading {loading}/>
