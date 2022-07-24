@@ -20,6 +20,7 @@
 				<li><a href="/examples/page-page">Page</a></li>
 				<li><a href="/examples/tag-page">Tag</a></li>
 				<li><a href="/examples/author-page">Author</a></li>
+				<li><a href="/examples/card">Card</a></li>
 			</ul>
 		</PostMain>
 	</Post>

@@ -20,7 +20,6 @@
 				}
 			]}
 			date="2022 November 2020"
-			excerpt="Sophie!"
 			primary_tag={{
 				accent_color: '#3b7b9c',
 				name: 'Sound Voltex',
@@ -28,7 +27,6 @@
 			}}
 			reading_time="3 min"
 			title="Sophie!"
-			url="https://google.com"
 		/>
 		<PostMain>
 			<!--kg-card-begin: markdown-->

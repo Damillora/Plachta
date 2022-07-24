@@ -1,6 +1,6 @@
 <script>
 	import Base from '$lib/components/Base/Base.svelte';
-	import Footer from '$lib/components/Footer.svelte/Footer.svelte';
+	import Footer from '$lib/components/Footer/Footer.svelte';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Hero from '$lib/components/Hero/Hero.svelte';
 	import Nav from '$lib/components/Nav/Nav.svelte';
