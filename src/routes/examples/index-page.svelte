@@ -48,7 +48,7 @@
 		/>
 		<PostCard
 			authors={[
-				{
+				{	
 					profile_image: 'https://images.nanao.moe/r/GDuirR.jpg',
 					url: '/examples/post-page',
 					name: 'Sophie Neuenmuller'

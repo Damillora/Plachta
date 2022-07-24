@@ -9,8 +9,6 @@
 	@import '../../styles/global';
 
 	.nav-menu {
-		@include px(1.5rem);
-		@include py(0.5rem);
 		@include transition;
 		background-color: var(--bg-color);
 		border-radius: 1rem;
@@ -21,6 +19,9 @@
 		color: var(--primary-color);
 		cursor: pointer;
 
+		@include screen(md) {
+			margin-right: 0.75rem;
+		}
 		:global(a) {
 			&:hover,
 			&:active,
@@ -42,6 +43,10 @@
 			:global(a) {
 				color: var(--primary-bg-color);
 			}
+		}
+		> :global(*) {
+			@include px(1rem);
+			@include py(0.5rem);
 		}
 	}
 </style>
