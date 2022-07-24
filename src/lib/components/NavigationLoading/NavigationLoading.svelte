@@ -14,7 +14,7 @@
 	@import '../../styles/global';
 	.navigation-loading {
 		display: none;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 
@@ -25,7 +25,7 @@
 		&__background {
 			background-color: var(--primary-bg-color);
 			opacity: 0.5;
-			position: absolute;
+			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100vw;
@@ -33,7 +33,7 @@
 		}
 		&__contents {
 			color: var(--primary-color);
-			position: absolute;
+			position: fixed;
 			bottom: -60vh;
 			width: 100vw;
 			font-size: $text-4xl;
@@ -45,7 +45,7 @@
 		}
 		&__loading {
 			background-color: var(--primary-color);
-			position: absolute;
+			position: fixed;
 			bottom: -50vh;
 			width: 2rem;
 			height: 2rem;
