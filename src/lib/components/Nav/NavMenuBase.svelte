@@ -2,7 +2,7 @@
 </script>
 
 <li class="nav-menu">
-	<slot></slot>
+	<slot />
 </li>
 
 <style lang="scss">
@@ -21,7 +21,7 @@
 		color: var(--primary-color);
 		cursor: pointer;
 
-		a {
+		:global(a) {
 			&:hover,
 			&:active,
 			&:visited,
@@ -32,14 +32,14 @@
 		}
 		&:hover {
 			background-color: var(--highlight-bg-color);
-			a {
+			:global(a) {
 				color: var(--highlight-color);
 			}
 		}
-		&.selected {
+		&:global(.selected) {
 			background-color: var(--primary-color);
 			display: flex;
-			a {
+			:global(a) {
 				color: var(--primary-bg-color);
 			}
 		}

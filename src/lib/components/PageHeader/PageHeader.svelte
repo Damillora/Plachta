@@ -17,5 +17,16 @@
 		@include py(1rem);
 		@include px(1rem);
 		@include shadow;
+
+		:global(h1),
+		:global(h2),
+		:global(h3),
+		:global(h4),
+		:global(h5),
+		:global(h6),
+		:global(a),
+		:global(p) {
+			color: var(--primary-bg-color);
+		}
 	}
 </style>

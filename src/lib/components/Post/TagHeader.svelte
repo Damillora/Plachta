@@ -44,7 +44,7 @@
 			margin-right: 1rem;
 		}
 		&__description {
-			a {
+			:global(a) {
 				color: var(--primary-bg-color);
 			}
 		}

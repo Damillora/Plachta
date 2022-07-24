@@ -43,7 +43,5 @@
 			border-radius: 50%;
 			margin-right: 0.5rem;
 		}
-		&__tag-description {
-		}
 	}
 </style>
