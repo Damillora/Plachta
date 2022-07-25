@@ -1,10 +1,12 @@
 <script lang="ts">
 	export let background = '';
 	export let alt = '';
+	export let srcset: string | null = null;
+	export let sizes: string | null = null;
 </script>
 
 <div class="hero">
-	<img class="hero__img" src={background} {alt} loading="lazy" />
+	<img class="hero__img" src={background} {alt} {srcset} {sizes} loading="lazy" />
 	<!-- 
     {{#if background}} <img class="hero__img" srcset="{{img_url
         background size="s" }}
