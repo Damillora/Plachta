@@ -1,6 +1,6 @@
 <script lang="ts">
 	import NavMenuBase from './NavMenuBase.svelte';
-	import theme, { setTheme } from 'svelte-themes';
+	import theme, { setTheme } from '../../../svelte-themes';
 
 	let themeValue: string | undefined = 'light';
 	theme.subscribe((val) => (themeValue = val.theme));
