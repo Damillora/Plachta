@@ -1,11 +1,11 @@
 {
 	"name": "@damillora/plachta",
 	"repository": "https://github.com/Damillora/Plachta",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"package": "svelte-kit package",
+		"package": "svelte-package",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
@@ -25,7 +25,6 @@
 		"prettier": "^2.8.1",
 		"prettier-plugin-svelte": "^2.9.0",
 		"sass": "^1.57.0",
-		"svelte": "^3.55.0",
 		"svelte-check": "^2.10.2",
 		"svelte-preprocess": "^4.10.7",
 		"svelte2tsx": "^0.5.22",
@@ -35,6 +34,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"svelte": "^3.55.0",
+		"@sveltejs/package": "^1.0.1",
 		"svelte-material-icons": "^2.0.4"
 	}
 }
