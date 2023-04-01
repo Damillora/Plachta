@@ -6,7 +6,7 @@
 	@import '../../styles/global';
 
 	.footer {
-		height: 3rem;
+		min-height: 3rem;
 		background-color: var(--primary-color);
 		color: var(--primary-bg-color);
 		display: flex;
