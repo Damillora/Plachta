@@ -1,7 +1,7 @@
 {
 	"name": "@damillora/plachta",
 	"repository": "https://github.com/Damillora/Plachta",
-	"version": "3.0.1",
+	"version": "3.0.2",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -37,5 +37,6 @@
 		"@sveltejs/package": "^2.2.0",
 		"svelte": "^4.1.2",
 		"svelte-material-icons": "^3.0.5"
-	}
+	},
+    	"files": ["dist"]
 }
