@@ -1,7 +1,7 @@
 {
 	"name": "@damillora/plachta",
 	"repository": "https://github.com/Damillora/Plachta",
-	"version": "3.0.2",
+	"version": "3.0.3",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -38,5 +38,17 @@
 		"svelte": "^4.1.2",
 		"svelte-material-icons": "^3.0.5"
 	},
-    	"files": ["dist"]
+        "svelte": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "exports": {
+                ".": {
+                        "types": "./dist/index.d.ts",
+                        "svelte": "./dist/index.js"
+                }
+        },
+        "files": [
+                "dist",
+                "!dist/**/*.test.*",
+                "!dist/**/*.spec.*"
+        ]
 }
