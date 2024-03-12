@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHeader from '../PageHeader/PageHeader.svelte';
+	import PageHeaderContents from '../PageHeader/PageHeaderContents.svelte';
 
 	export let accent_color: string | undefined;
 	export let name = '';
@@ -7,22 +8,24 @@
 </script>
 
 <PageHeader>
-	<p class="category-name">Tag</p>
-	<div class="tag">
-		<h1 class="tag__name">
-			{#if accent_color}
-				<span class="tag__color" style="background-color: {accent_color};" />
-			{:else}
-				<span class="tag__color" />
+	<PageHeaderContents>
+		<p class="category-name">Tag</p>
+		<div class="tag">
+			<h1 class="tag__name">
+				{#if accent_color}
+					<span class="tag__color" style="background-color: {accent_color};" />
+				{:else}
+					<span class="tag__color" />
+				{/if}
+				{name}
+			</h1>
+			{#if description}
+				<p class="tag__description">
+					{description}
+				</p>
 			{/if}
-			{name}
-		</h1>
-		{#if description}
-			<p class="tag__description">
-				{description}
-			</p>
-		{/if}
-	</div>
+		</div>
+	</PageHeaderContents>
 </PageHeader>
 
 <style lang="scss">

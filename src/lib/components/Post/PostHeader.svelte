@@ -1,5 +1,7 @@
 <script lang="ts">
 	import PageHeader from '../PageHeader/PageHeader.svelte';
+	import PageHeaderContents from '../PageHeader/PageHeaderContents.svelte';
+	import PageHeaderImage from '../PageHeader/PageHeaderImage.svelte';
 
 	export let isPage = false;
 
@@ -14,56 +16,68 @@
 	export let date: string = '';
 	export let reading_time = '';
 	export let authors: { profile_image: string; url: string; name: string }[] | null = null;
+	export let background = '';
 </script>
 
 <PageHeader>
-	{#if isPage == false}
-		<div class="post-header__info">
-			{#if primary_tag}
-				{#if primary_tag.accent_color}
-					<span
-						class="post-header__tag-color"
-						style="background-color: {primary_tag.accent_color};"
-					/>
+	{#if background}
+	<PageHeaderImage background={background}>
+		
+	</PageHeaderImage>
+	{/if}
+	<PageHeaderContents>
+		{#if isPage == false}
+			<div class="post-header__info">
+				{#if primary_tag}
+					{#if primary_tag.accent_color}
+						<span
+							class="post-header__tag-color"
+							style="background-color: {primary_tag.accent_color};"
+						/>
+					{/if}
+					<span class="post-header__tag-name">
+						<a href={primary_tag.url}>{primary_tag.name}</a>
+					</span>
 				{/if}
-				<span class="post-header__tag-name">
-					<a href={primary_tag.url}>{primary_tag.name}</a>
-				</span>
-			{/if}
-			<p class="post-header__date">
-				<time datetime={date}>
-					{date}
-				</time>
-				<span class="bull">&bull;</span>
-				{reading_time}
-			</p>
-		</div>
-	{/if}
-	<h1 class="post-header__title">
-		{title}
-	</h1>
-	{#if isPage == false}
-		<div class="post-header__author">
-			{#if authors}
-				{#each authors as author}
-					{#if author.profile_image}
-						<a href={author.url}>
-							<img src={author.profile_image} class="post-header__author-image" alt={author.name} />
-						</a>
-					{/if}
-				{/each}
-				<p class="post-header__author-name">
-					{#if authors.length > 2}
-						Multiple authors
-					{:else}
-						{#each authors as author}
-							<a href={author.url} title={author.name}>{author.name}</a>
-						{/each}
-					{/if}
+				<p class="post-header__date">
+					<time datetime={date}>
+						{date}
+					</time>
+					<span class="bull">&bull;</span>
+					{reading_time}
 				</p>
-			{/if}
-		</div>
-	{/if}
+			</div>
+		{/if}
+		<h1 class="post-header__title">
+			{title}
+		</h1>
+		{#if isPage == false}
+			<div class="post-header__author">
+				{#if authors}
+					{#each authors as author}
+						{#if author.profile_image}
+							<a href={author.url}>
+								<img
+									src={author.profile_image}
+									class="post-header__author-image"
+									alt={author.name}
+								/>
+							</a>
+						{/if}
+					{/each}
+					<p class="post-header__author-name">
+						{#if authors.length > 2}
+							Multiple authors
+						{:else}
+							{#each authors as author}
+								<a href={author.url} title={author.name}>{author.name}</a>
+							{/each}
+						{/if}
+					</p>
+				{/if}
+			</div>
+		{/if}
+	</PageHeaderContents>
 </PageHeader>
 
 <style lang="scss">

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHeader from '../PageHeader/PageHeader.svelte';
+	import PageHeaderContents from '../PageHeader/PageHeaderContents.svelte';
 
 	export let profile_image = '';
 	export let name = '';
@@ -10,25 +11,30 @@
 </script>
 
 <PageHeader>
-	<p class="category-name">Author</p>
-	<div class="author">
-		<h1 class="author__name">
-			<img class="author__image" src={profile_image} alt={name} />
-			{name}
-		</h1>
-		<p class="author__description">{bio}</p>
-		<p class="author__description">
-			{#if website}
-				<span class=""><a href={website} target="_blank" rel="noopener">Website</a></span>
-			{/if}
-			{#if twitter}
-				<span class=""><a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener">Twitter</a></span>
-			{/if}
-			{#if facebook}
-				<span class=""><a href={`${facebook}`} target="_blank" rel="noopener">Facebook</a></span>
-			{/if}
-		</p>
-	</div>
+	<PageHeaderContents>
+		<p class="category-name">Author</p>
+		<div class="author">
+			<h1 class="author__name">
+				<img class="author__image" src={profile_image} alt={name} />
+				{name}
+			</h1>
+			<p class="author__description">{bio}</p>
+			<p class="author__description">
+				{#if website}
+					<span class=""><a href={website} target="_blank" rel="noopener">Website</a></span>
+				{/if}
+				{#if twitter}
+					<span class=""
+						><a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener">Twitter</a
+						></span
+					>
+				{/if}
+				{#if facebook}
+					<span class=""><a href={`${facebook}`} target="_blank" rel="noopener">Facebook</a></span>
+				{/if}
+			</p>
+		</div>
+	</PageHeaderContents>
 </PageHeader>
 
 <style lang="scss">

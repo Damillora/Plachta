@@ -2,8 +2,10 @@
 	import PostCard from '$lib/components/PostCard/PostCard.svelte';
 	import Container from '$lib/components/Container/Container.svelte';
 	import Index from '$lib/components/PageTypes/Index.svelte';
+	import Hero from '$lib/components/Hero/Hero.svelte';
 </script>
 
+<Hero background="https://images.nanao.moe/r/7jETH3.png" />
 <Container>
 	<Index>
 		<PostCard

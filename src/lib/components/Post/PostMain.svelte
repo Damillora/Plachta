@@ -27,14 +27,16 @@
 		@include shadow;
 
 		&__content {
-			@include py(1rem);
+			padding-bottom: 1rem;
+			padding-top: 0.1rem;
 			@include px(1rem);
 			border-radius: 20px 20px 0px 0px;
 			background-color: var(--bg-color);
 			color: var(--text-color);
 		}
 		&__single {
-			@include py(1rem);
+			padding-bottom: 1rem;
+			padding-top: 0.1rem;
 			@include px(1rem);
 			border-radius: 20px;
 			background-color: var(--bg-color);

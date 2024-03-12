@@ -40,6 +40,8 @@ import Notice from './components/Notice/Notice.svelte';
 
 // PageHeader
 import PageHeader from './components/PageHeader/PageHeader.svelte';
+import PageHeaderContents from "./components/PageHeader/PageHeaderContents.svelte";
+import PageHeaderImage from './components/PageHeader/PageHeaderImage.svelte';
 
 // PageTypes
 import Index from './components/PageTypes/Index.svelte';
@@ -70,7 +72,7 @@ export {
     Nav, NavDarkMode,NavMenu,NavMenuBase,NavSearch,
     NavigationLoading,
     Notice,
-    PageHeader,
+    PageHeader, PageHeaderContents, PageHeaderImage,
     Index,
     Post,
     AuthorHeader,

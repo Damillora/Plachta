@@ -26,7 +26,6 @@
 			<NavSearch />
 		</svelte:fragment>
 	</Header>
-	<Hero background="https://images.nanao.moe/r/7jETH3.png" />
 
 	<slot />
 	<Footer>
