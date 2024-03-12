@@ -17,11 +17,13 @@
 	export let reading_time = '';
 	export let authors: { profile_image: string; url: string; name: string }[] | null = null;
 	export let background = '';
+	export let srcset: string | null = null;
+	export let sizes: string | null = null;
 </script>
 
 <PageHeader>
 	{#if background}
-	<PageHeaderImage background={background}>
+	<PageHeaderImage background={background} {srcset} {sizes}>
 		
 	</PageHeaderImage>
 	{/if}
