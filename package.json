@@ -1,7 +1,7 @@
 {
 	"name": "@damillora/plachta",
 	"repository": "https://github.com/Damillora/Plachta",
-	"version": "4.0.2",
+	"version": "4.0.3",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",

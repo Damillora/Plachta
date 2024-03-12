@@ -28,5 +28,11 @@
 		:global(p) {
 			color: var(--primary-bg-color);
 		}
+
+		&__image {
+			width: 100%;
+			max-height: 40vw;
+			object-fit: cover;
+		}
 	}
 </style>
