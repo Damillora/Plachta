@@ -1,7 +1,9 @@
 <script lang="ts">
 	import PageHeader from '../PageHeader/PageHeader.svelte';
 	import PageHeaderContents from '../PageHeader/PageHeaderContents.svelte';
+	import PageHeaderImage from '../PageHeader/PageHeaderImage.svelte';
 
+	export let background = '';
 	export let profile_image = '';
 	export let name = '';
 	export let bio = '';
@@ -11,6 +13,11 @@
 </script>
 
 <PageHeader>
+	{#if background}
+	<PageHeaderImage background={background}>
+		
+	</PageHeaderImage>
+	{/if}
 	<PageHeaderContents>
 		<p class="category-name">Author</p>
 		<div class="author">

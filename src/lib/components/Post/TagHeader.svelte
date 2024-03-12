@@ -1,13 +1,20 @@
 <script lang="ts">
 	import PageHeader from '../PageHeader/PageHeader.svelte';
 	import PageHeaderContents from '../PageHeader/PageHeaderContents.svelte';
+	import PageHeaderImage from '../PageHeader/PageHeaderImage.svelte';
 
+	export let background = '';
 	export let accent_color: string | undefined;
 	export let name = '';
 	export let description: string | undefined;
 </script>
 
 <PageHeader>
+	{#if background}
+	<PageHeaderImage background={background}>
+		
+	</PageHeaderImage>
+	{/if}
 	<PageHeaderContents>
 		<p class="category-name">Tag</p>
 		<div class="tag">
