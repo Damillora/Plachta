@@ -6,6 +6,8 @@
 	@import '../../styles/global';
 
 	.post {
+		@include py(2rem);
+		@include px(1rem);
 		@include mx(auto);
 
 		@include screen(md) {

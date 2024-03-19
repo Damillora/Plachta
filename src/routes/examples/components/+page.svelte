@@ -10,15 +10,13 @@
 </script>
 
 <Container>
-	<Index>
-		<Post>
-			<h2>Notice</h2>
-			<Notice>
-				This page is a <strong>work-in-progress</strong>. Contributions are welcome!
-			</Notice>
-			<h2>Hero Content</h2>
-		</Post>
-	</Index>
+	<Post>
+		<h2>Notice</h2>
+		<Notice>
+			This page is a <strong>work-in-progress</strong>. Contributions are welcome!
+		</Notice>
+		<h2>Hero Content</h2>
+	</Post>
 </Container>
 
 <Hero background="https://images.nanao.moe/r/7jETH3.png">
