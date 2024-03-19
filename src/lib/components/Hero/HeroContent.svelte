@@ -17,7 +17,7 @@
 	.hero-content {
 		position: absolute;
 		background-color: rgba(0, 0, 0, 0.5);
-		color: var(--bg-color);
+		color: $text-dark;
 		@include py(2rem);
 		@include px(1rem);
 		left: 0;
@@ -33,12 +33,12 @@
 		:global(h5),
 		:global(h6),
 		:global(a) {
-			color: var(--bg-color);
+			color: $text-dark;
 		}
 
 		&--light {
 			background-color: rgba(255, 255, 255, 0.5);
-			color: var(--text-color);
+			color: $text-light;
 
 			:global(p),
 			:global(h1),
@@ -48,7 +48,7 @@
 			:global(h5),
 			:global(h6),
 			:global(a) {
-				color: var(--text-color);
+				color: $text-light;
 			}
 		}
 	}
