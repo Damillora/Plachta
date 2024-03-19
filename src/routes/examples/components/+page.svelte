@@ -4,6 +4,9 @@
 	import Index from '$lib/components/PageTypes/Index.svelte';
 	import Notice from '$lib/components/Notice/Notice.svelte';
 	import Post from '$lib/components/PageTypes/Post.svelte';
+	import HeroContent from '$lib/components/Hero/HeroContent.svelte';
+	import Hero from '$lib/components/Hero/Hero.svelte';
+	import HeroList from '$lib/components/Hero/HeroList.svelte';
 </script>
 
 <Container>
@@ -13,6 +16,35 @@
 			<Notice>
 				This page is a <strong>work-in-progress</strong>. Contributions are welcome!
 			</Notice>
+			<h2>Hero Content</h2>
 		</Post>
 	</Index>
 </Container>
+
+<Hero background="https://images.nanao.moe/r/7jETH3.png">
+	<HeroContent>
+		<h1>Astesia Urbica</h1>
+		<p>Star birb</p>
+	</HeroContent>
+</Hero>
+<HeroList>
+
+	<Hero background="https://images.nanao.moe/r/7jETH3.png" halfWidth>
+		<HeroContent>
+			<h1>Astesia Urbica</h1>
+			<p>Star birb</p>
+		</HeroContent>
+	</Hero>
+	<Hero background="https://images.nanao.moe/r/7jETH3.png" halfWidth>
+		<HeroContent>
+			<h1>Astesia Urbica</h1>
+			<p>Star birb</p>
+		</HeroContent>
+	</Hero>
+	<Hero background="https://images.nanao.moe/r/7jETH3.png" doubleHeight>
+		<HeroContent>
+			<h1>Astesia Urbica</h1>
+			<p>Star birb</p>
+		</HeroContent>
+	</Hero>
+</HeroList>

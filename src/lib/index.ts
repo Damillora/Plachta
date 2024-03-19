@@ -24,6 +24,8 @@ import Header from './components/Header/Header.svelte';
 
 // Hero
 import Hero from './components/Hero/Hero.svelte';
+import HeroContent from './components/Hero/HeroContent.svelte';
+import HeroList from './components/Hero/HeroList.svelte';
 
 // Nav
 import Nav from './components/Nav/Nav.svelte';
@@ -68,7 +70,7 @@ export {
     Container,
     Footer,
     Header,
-    Hero,
+    Hero, HeroContent, HeroList,
     Nav, NavDarkMode,NavMenu,NavMenuBase,NavSearch,
     NavigationLoading,
     Notice,
