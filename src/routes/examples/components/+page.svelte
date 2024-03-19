@@ -27,19 +27,25 @@
 </Hero>
 <HeroList>
 
-	<Hero background="https://images.nanao.moe/r/7jETH3.png" halfWidth>
+	<Hero background="https://images.nanao.moe/r/7jETH3.png" halfWidth contentSize="short">
 		<HeroContent>
 			<h1>Astesia Urbica</h1>
 			<p>Star birb</p>
 		</HeroContent>
 	</Hero>
-	<Hero background="https://images.nanao.moe/r/7jETH3.png" halfWidth>
+	<Hero background="https://images.nanao.moe/r/7jETH3.png" halfWidth contentSize="short">
 		<HeroContent>
 			<h1>Astesia Urbica</h1>
 			<p>Star birb</p>
 		</HeroContent>
 	</Hero>
-	<Hero background="https://images.nanao.moe/r/7jETH3.png" doubleHeight>
+	<Hero background="https://images.nanao.moe/r/7jETH3.png" contentSize="medium">
+		<HeroContent>
+			<h1>Astesia Urbica</h1>
+			<p>Star birb</p>
+		</HeroContent>
+	</Hero>
+	<Hero background="https://images.nanao.moe/r/7jETH3.png" contentSize="tall">
 		<HeroContent>
 			<h1>Astesia Urbica</h1>
 			<p>Star birb</p>
