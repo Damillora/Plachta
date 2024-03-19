@@ -31,7 +31,8 @@
 		:global(h3),
 		:global(h4),
 		:global(h5),
-		:global(h6) {
+		:global(h6),
+		:global(a) {
 			color: var(--bg-color);
 		}
 
@@ -45,7 +46,8 @@
 			:global(h3),
 			:global(h4),
 			:global(h5),
-			:global(h6) {
+			:global(h6),
+			:global(a) {
 				color: var(--text-color);
 			}
 		}
