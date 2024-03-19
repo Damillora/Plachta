@@ -5,7 +5,7 @@
 <style lang="scss">
 	@import '../../styles/global';
 	.index {
-		@include py(2rem);
+		@include my(2rem);
 		@include px(1rem);
 	}
 </style>

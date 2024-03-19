@@ -18,8 +18,6 @@
 		position: absolute;
 		background-color: rgba(0, 0, 0, 0.5);
 		color: $text-dark;
-		@include py(2rem);
-		@include px(1rem);
 		left: 0;
 		right: 0;
 		top: 0;
