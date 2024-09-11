@@ -23,13 +23,14 @@
 			margin-right: 0.75rem;
 		}
 		:global(a) {
+			color: var(--primary-color);
+
 			&:hover,
 			&:active,
 			&:visited,
 			&:focus {
 				text-decoration: none;
 			}
-			color: var(--primary-color);
 		}
 		&:hover {
 			background-color: var(--highlight-bg-color);
