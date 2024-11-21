@@ -8,23 +8,37 @@
 	import PostCardAuthor from './PostCardAuthor.svelte';
 	import PostCardInfo from './PostCardInfo.svelte';
 
-	export let feature_image = '';
-	export let title = '';
-	export let primary_tag: {
+	interface Props {
+		feature_image?: string;
+		title?: string;
+		primary_tag?: {
 		accent_color: string;
 		url: string;
 		name: string;
-	} | null = null;
-	export let date = '';
-	export let reading_time = '';
-	export let url = '';
-	export let excerpt = '';
-	export let authors: {
+	} | null;
+		date?: string;
+		reading_time?: string;
+		url?: string;
+		excerpt?: string;
+		authors?: {
 		profile_image: string;
 		url: string;
 		name: string;
-	}[] = [];
-	export let readMore = true;
+	}[];
+		readMore?: boolean;
+	}
+
+	let {
+		feature_image = '',
+		title = '',
+		primary_tag = null,
+		date = '',
+		reading_time = '',
+		url = '',
+		excerpt = '',
+		authors = [],
+		readMore = true
+	}: Props = $props();
 </script>
 
 <Card hasImage={true}>

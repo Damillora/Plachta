@@ -1,10 +1,23 @@
 <script lang="ts">
-	export let background = '';
-	export let alt = '';
-	export let srcset: string | null = null;
-	export let sizes: string | null = null;
-	export let halfWidth = false;
-	export let contentSize: 'none' | 'short' | 'medium' | 'tall' = 'none';
+	interface Props {
+		background?: string;
+		alt?: string;
+		srcset?: string | null;
+		sizes?: string | null;
+		halfWidth?: boolean;
+		contentSize?: 'none' | 'short' | 'medium' | 'tall';
+		children?: import('svelte').Snippet;
+	}
+
+	let {
+		background = '',
+		alt = '',
+		srcset = null,
+		sizes = null,
+		halfWidth = false,
+		contentSize = 'none',
+		children
+	}: Props = $props();
 </script>
 
 <div
@@ -15,7 +28,7 @@
 	class:hero--content-tall={contentSize == 'tall'}
 >
 	<img class="hero__img" src={background} {alt} {srcset} {sizes} loading="lazy" />
-	<slot />
+	{@render children?.()}
 </div>
 
 <style lang="scss">

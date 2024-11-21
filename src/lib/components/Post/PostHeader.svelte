@@ -3,22 +3,36 @@
 	import PageHeaderContents from '../PageHeader/PageHeaderContents.svelte';
 	import PageHeaderImage from '../PageHeader/PageHeaderImage.svelte';
 
-	export let isPage = false;
 
-	export let title = '';
-	export let primary_tag:
+	interface Props {
+		isPage?: boolean;
+		title?: string;
+		primary_tag?: 
 		| {
 				accent_color: string;
 				url: string;
 				name: string;
 		  }
-		| undefined = undefined;
-	export let date: string = '';
-	export let reading_time = '';
-	export let authors: { profile_image: string; url: string; name: string }[] | null = null;
-	export let background = '';
-	export let srcset: string | null = null;
-	export let sizes: string | null = null;
+		| undefined;
+		date?: string;
+		reading_time?: string;
+		authors?: { profile_image: string; url: string; name: string }[] | null;
+		background?: string;
+		srcset?: string | null;
+		sizes?: string | null;
+	}
+
+	let {
+		isPage = false,
+		title = '',
+		primary_tag = undefined,
+		date = '',
+		reading_time = '',
+		authors = null,
+		background = '',
+		srcset = null,
+		sizes = null
+	}: Props = $props();
 </script>
 
 <PageHeader>
@@ -34,7 +48,7 @@
 							<span
 								class="post-header__tag-color"
 								style="background-color: {primary_tag.accent_color};"
-							/>
+							></span>
 						{/if}
 						<span class="post-header__tag-name">
 							<a href={primary_tag.url}>{primary_tag.name}</a>

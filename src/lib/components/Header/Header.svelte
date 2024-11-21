@@ -1,23 +1,29 @@
 <script lang="ts">
 	import Nav from '../Nav/Nav.svelte';
+	interface Props {
+		title?: import('svelte').Snippet;
+		nav?: import('svelte').Snippet;
+	}
 
-	let shown = false;
+	let { title, nav }: Props = $props();
+
+	let shown = $state(false);
 
 	const toggleShown = () => (shown = !shown);
 </script>
 
 <header class="header" id="header">
 	<div class="header__title">
-		<slot name="title" />
+		{@render title?.()}
 	</div>
 	<div class="header__nav">
-		<a class="header__nav-button" id="menushow" on:click={toggleShown}>
+		<a class="header__nav-button" id="menushow" onclick={toggleShown}>
 			<span class="material-icons"> menu </span>
 		</a>
 		<Nav {shown}>
-			<slot name="nav">
+			{#if nav}{@render nav()}{:else}
 				<!-- {{navigation}} -->
-			</slot>
+			{/if}
 		</Nav>
 	</div>
 </header>

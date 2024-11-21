@@ -1,10 +1,15 @@
-<script>
+<script lang="ts">
 	import SvelteTheme from '../../svelte-themes/SvelteTheme.svelte';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <SvelteTheme />
 
-<slot />
+{@render children?.()}
 
 <style lang="scss" global>
 	@import '../../styles/global';

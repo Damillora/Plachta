@@ -51,7 +51,7 @@
 							referrerpolicy="strict-origin-when-cross-origin"
 							allowfullscreen=""
 							title="アドリブ"
-						/>
+						></iframe>
 					</div>
 				</figure>
 				<p>
@@ -80,7 +80,7 @@
 							referrerpolicy="strict-origin-when-cross-origin"
 							allowfullscreen=""
 							title="【Original Song】AposTASTY ✍︎ by Runie Ruse"
-						/>
+						></iframe>
 					</div>
 				</figure>
 				<p>
@@ -107,7 +107,7 @@
 							referrerpolicy="strict-origin-when-cross-origin"
 							allowfullscreen=""
 							title="コントラスト"
-						/>
+						></iframe>
 					</div>
 				</figure>
 				<p>
@@ -142,7 +142,7 @@
 							referrerpolicy="strict-origin-when-cross-origin"
 							allowfullscreen=""
 							title="【MV】Fantastique!  / TRINITYAiLE　作詞：稲葉エミ　作曲・編曲：Tomggg【IDOLY PRIDE/アイプラ】"
-						/>
+						></iframe>
 					</div>
 				</figure>
 				<p>
@@ -167,7 +167,7 @@
 							referrerpolicy="strict-origin-when-cross-origin"
 							allowfullscreen=""
 							title="Challenger"
-						/>
+						></iframe>
 					</div>
 				</figure>
 				<p>
@@ -254,7 +254,9 @@
 				</p>
 			</GhostStyle>
 
-			<svelte:fragment slot="comments" />
+			{#snippet comments()}
+						<svelte:fragment  />
+					{/snippet}
 		</PostMain>
 		<PostNavigator
 			prev_post={{

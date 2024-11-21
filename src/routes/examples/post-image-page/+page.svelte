@@ -206,7 +206,9 @@
 			<p><em>Thank God Almighty, we are free at last!</em></p>
 			<!--kg-card-end: markdown-->
 
-			<svelte:fragment slot="comments" />
+			{#snippet comments()}
+						<svelte:fragment  />
+					{/snippet}
 		</PostMain>
 		<PostNavigator
 			prev_post={{

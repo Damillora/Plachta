@@ -1,7 +1,11 @@
 <script lang="ts">
-	export let url = '';
-	export let title = '';
-	export let excerpt = '';
+	interface Props {
+		url?: string;
+		title?: string;
+		excerpt?: string;
+	}
+
+	let { url = '', title = '', excerpt = '' }: Props = $props();
 </script>
 
 <div class="search-result">

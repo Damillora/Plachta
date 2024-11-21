@@ -1,6 +1,10 @@
-<script>
-	export let image = '';
-	export let alt = '';
+<script lang="ts">
+	interface Props {
+		image?: string;
+		alt?: string;
+	}
+
+	let { image = '', alt = '' }: Props = $props();
 </script>
 
 <div class="card__banner">

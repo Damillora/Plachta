@@ -1,12 +1,11 @@
 <script lang="ts">
-	export let prev_post = {
+	let { prev_post = {
 		url: '',
 		title: ''
-	};
-	export let next_post = {
+	}, next_post = {
 		url: '',
 		title: ''
-	};
+	} } = $props();
 </script>
 
 <div class="post-navigator-root">
@@ -22,7 +21,7 @@
 			</div>
 		</a>
 	{/if}
-	<div class="post-navigator__separator" />
+	<div class="post-navigator__separator"></div>
 	{#if next_post}
 		<a href={next_post.url} class="post-navigator post-navigator--next">
 			<div

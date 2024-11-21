@@ -1,15 +1,21 @@
 <script lang="ts">
+	interface Props {
+		comments?: import('svelte').Snippet;
+		children?: import('svelte').Snippet;
+	}
+
+	let { comments, children }: Props = $props();
 </script>
 
 <div class="post-main">
-	<div class:post-main__content={true} class:post-main__with-comments={$$slots.comments} class:post-main__without-comments={!$$slots.comments}>
-		<slot />
+	<div class:post-main__content={true} class:post-main__with-comments={comments} class:post-main__without-comments={!comments}>
+		{@render children?.()}
 	</div>
-	{#if $$slots.comments}
+	{#if comments}
 		<div class="post-main__comments">
 			<h1 class="post-main__comments-title">Comments</h1>
 
-			<slot name="comments" />
+			{@render comments?.()}
 		</div>
 	{/if}
 </div>

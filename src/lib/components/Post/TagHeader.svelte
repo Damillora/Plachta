@@ -3,10 +3,19 @@
 	import PageHeaderContents from '../PageHeader/PageHeaderContents.svelte';
 	import PageHeaderImage from '../PageHeader/PageHeaderImage.svelte';
 
-	export let background = '';
-	export let accent_color: string | undefined;
-	export let name = '';
-	export let description: string | undefined;
+	interface Props {
+		background?: string;
+		accent_color: string | undefined;
+		name?: string;
+		description: string | undefined;
+	}
+
+	let {
+		background = '',
+		accent_color,
+		name = '',
+		description
+	}: Props = $props();
 </script>
 
 <PageHeader>
@@ -20,9 +29,9 @@
 		<div class="tag">
 			<h1 class="tag__name">
 				{#if accent_color}
-					<span class="tag__color" style="background-color: {accent_color};" />
+					<span class="tag__color" style="background-color: {accent_color};"></span>
 				{:else}
-					<span class="tag__color" />
+					<span class="tag__color"></span>
 				{/if}
 				{name}
 			</h1>

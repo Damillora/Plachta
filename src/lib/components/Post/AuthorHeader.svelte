@@ -3,13 +3,25 @@
 	import PageHeaderContents from '../PageHeader/PageHeaderContents.svelte';
 	import PageHeaderImage from '../PageHeader/PageHeaderImage.svelte';
 
-	export let background = '';
-	export let profile_image = '';
-	export let name = '';
-	export let bio = '';
-	export let website: string | undefined = undefined;
-	export let twitter: string | undefined = undefined;
-	export let facebook: string | undefined = undefined;
+	interface Props {
+		background?: string;
+		profile_image?: string;
+		name?: string;
+		bio?: string;
+		website?: string | undefined;
+		twitter?: string | undefined;
+		facebook?: string | undefined;
+	}
+
+	let {
+		background = '',
+		profile_image = '',
+		name = '',
+		bio = '',
+		website = undefined,
+		twitter = undefined,
+		facebook = undefined
+	}: Props = $props();
 </script>
 
 <PageHeader>

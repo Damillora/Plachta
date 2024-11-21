@@ -5,7 +5,7 @@
 	let themeValue: string | undefined = 'light';
 	theme.subscribe((val) => (themeValue = val.theme));
 
-	let icon = 'brightness_high';
+	let icon = $state('brightness_high');
 	function setDarkMode() {
 		if (themeValue == 'dark') {
 			icon = 'brightness_high';
@@ -26,5 +26,5 @@
 </script>
 
 <NavMenuBase>
-	<span class="material-icons" id="dark-mode" on:click={darkModeClick}> {icon}</span>
+	<span class="material-icons" id="dark-mode" onclick={darkModeClick}> {icon}</span>
 </NavMenuBase>

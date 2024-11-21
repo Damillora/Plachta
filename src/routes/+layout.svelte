@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { navigating } from '$app/stores';
 
 	import Base from '$lib/components/Base/Base.svelte';
@@ -10,24 +10,33 @@
 	import NavMenu from '$lib/components/Nav/NavMenu.svelte';
 	import NavSearch from '$lib/components/Nav/NavSearch.svelte';
 	import NavigationLoading from '$lib/components/NavigationLoading/NavigationLoading.svelte';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
 
-	let loading = true;
+	let { children }: Props = $props();
+
+	let loading = $state(true);
 	navigating.subscribe((x) => (loading = x != null));
 </script>
 
 <Base>
 	<Header>
-		<svelte:fragment slot="title">
-			<a href="/"> Plachta Theme Kit </a>
-		</svelte:fragment>
-		<svelte:fragment slot="nav">
-			<NavMenu label="Home" url="/" />
-			<NavDarkMode />
-			<NavSearch />
-		</svelte:fragment>
+		{#snippet title()}
+			
+				<a href="/"> Plachta Theme Kit </a>
+			
+			{/snippet}
+		{#snippet nav()}
+			
+				<NavMenu label="Home" url="/" />
+				<NavDarkMode />
+				<NavSearch />
+			
+			{/snippet}
 	</Header>
 
-	<slot />
+	{@render children?.()}
 	<Footer>
 		<p>Copyright (c) 2021 Damillora</p>
 	</Footer>

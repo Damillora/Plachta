@@ -1,9 +1,14 @@
 <script lang="ts">
-	export let shown = false;
+	interface Props {
+		shown?: boolean;
+		children?: import('svelte').Snippet;
+	}
+
+	let { shown = false, children }: Props = $props();
 </script>
 
 <nav class="nav" class:nav--shown={shown}>
-	<slot />
+	{@render children?.()}
 </nav>
 
 <style lang="scss">

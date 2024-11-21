@@ -1,9 +1,14 @@
-<script>
-	export let hasImage = false;
+<script lang="ts">
+	interface Props {
+		hasImage?: boolean;
+		children?: import('svelte').Snippet;
+	}
+
+	let { hasImage = false, children }: Props = $props();
 </script>
 
 <div class="card" class:card--image={hasImage}>
-	<slot />
+	{@render children?.()}
 </div>
 
 <style lang="scss">

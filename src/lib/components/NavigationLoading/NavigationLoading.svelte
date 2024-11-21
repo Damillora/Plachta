@@ -1,13 +1,17 @@
 <script lang="ts">
-	export let loading = true;
+	interface Props {
+		loading?: boolean;
+	}
+
+	let { loading = true }: Props = $props();
 </script>
 
 <div class="navigation-loading" class:navigation-loading--loading={loading}>
-	<div class="navigation-loading__background" />
+	<div class="navigation-loading__background"></div>
 	<div class="navigation-loading__contents">
 		<p>Loading</p>
 	</div>
-	<div class="navigation-loading__loading" />
+	<div class="navigation-loading__loading"></div>
 </div>
 
 <style lang="scss">

@@ -1,9 +1,13 @@
 <script lang="ts">
-	export let authors: {
+	interface Props {
+		authors?: {
 		profile_image: string;
 		url: string;
 		name: string;
-	}[] = [];
+	}[];
+	}
+
+	let { authors = [] }: Props = $props();
 </script>
 
 <div class="post-card__author">

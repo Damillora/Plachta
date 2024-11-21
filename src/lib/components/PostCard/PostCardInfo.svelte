@@ -1,17 +1,21 @@
 <script lang="ts">
-	export let primary_tag: {
+	interface Props {
+		primary_tag?: {
 		accent_color: string;
 		url: string;
 		name: string;
-	} | null = null;
-	export let date = '';
-	export let reading_time = '';
+	} | null;
+		date?: string;
+		reading_time?: string;
+	}
+
+	let { primary_tag = null, date = '', reading_time = '' }: Props = $props();
 </script>
 
 <div class="post-card__info">
 	{#if primary_tag}
 		{#if primary_tag.accent_color}
-			<span class="post-card__tag-color" style="background-color: {primary_tag.accent_color};" />
+			<span class="post-card__tag-color" style="background-color: {primary_tag.accent_color};"></span>
 		{/if}
 		<a class="post-card__tag-name" href={primary_tag.url}>{primary_tag.name}</a>
 	{/if}

@@ -1,18 +1,28 @@
 <script lang="ts">
 	import Index from '../PageTypes/Index.svelte';
 
-	export let accent_color = '';
-	export let name = '';
-	export let url = '';
+	interface Props {
+		accent_color?: string;
+		name?: string;
+		url?: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let {
+		accent_color = '',
+		name = '',
+		url = '',
+		children
+	}: Props = $props();
 </script>
 
 <Index>
 	<div class="post-related">
 		<span class="post-related__header">More in</span>
 		{#if accent_color}
-			<span class="post-related__tag-color" style="background-color: {accent_color};" />
+			<span class="post-related__tag-color" style="background-color: {accent_color};"></span>
 		{:else}
-			<span class="post-related__tag-color" />
+			<span class="post-related__tag-color"></span>
 		{/if}
 		<span class="post-related__tag-description">
 			<a href={url}>{name}</a>
@@ -20,7 +30,7 @@
 	</div>
 </Index>
 <Index>
-	<slot />
+	{@render children?.()}
 </Index>
 
 <style lang="scss">

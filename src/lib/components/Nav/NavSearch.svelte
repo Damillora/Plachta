@@ -16,7 +16,7 @@
 		type="text"
 		name="search"
 		id="search-query"
-		on:input={doSearch}
+		oninput={doSearch}
 	/>
 	<span class="material-icons nav-search-icon"> search </span>
 </li>

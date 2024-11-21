@@ -1,12 +1,17 @@
 <script lang="ts">
 	import Container from '../Container/Container.svelte';
 	import Post from '../PageTypes/Post.svelte';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <div class="hero-content">
 	<Container>
 		<Post>
-			<slot />
+			{@render children?.()}
 		</Post>
 	</Container>
 </div>

@@ -1,8 +1,17 @@
 <script lang="ts">
-	export let background = '';
-	export let caption = '';
-	export let srcset: string | null = null;
-	export let sizes: string | null = null;
+	interface Props {
+		background?: string;
+		caption?: string;
+		srcset?: string | null;
+		sizes?: string | null;
+	}
+
+	let {
+		background = '',
+		caption = '',
+		srcset = null,
+		sizes = null
+	}: Props = $props();
 </script>
 
 <div class="page-header-image">
