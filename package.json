@@ -1,7 +1,7 @@
 {
 	"name": "@damillora/plachta",
 	"repository": "https://github.com/Damillora/Plachta",
-	"version": "6.1.0",
+	"version": "6.2.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -21,6 +21,7 @@
 		"eslint": "^8.46.0",
 		"eslint-config-prettier": "^8.10.0",
 		"eslint-plugin-svelte": "^2.45.1",
+		"esm-env": "^1.1.4",
 		"postcss": "^8.4.27",
 		"prettier": "^3.1.0",
 		"prettier-plugin-svelte": "^3.2.6",
@@ -30,12 +31,12 @@
 		"svelte2tsx": "^0.6.19",
 		"tslib": "^2.6.1",
 		"typescript": "^5.5.0",
-		"vite": "^5.4.4"
+		"vite": "^5.4.4",
+		"@sveltejs/kit": "^2.5.27",
+		"@sveltejs/package": "^2.3.7"
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/kit": "^2.5.27",
-		"@sveltejs/package": "^2.3.7",
 		"svelte": "^5.0.0"
 	},
 	"svelte": "./dist/index.js",

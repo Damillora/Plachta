@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { run } from 'svelte/legacy';
 
-	import { browser } from '$app/environment';
+	import { BROWSER } from 'esm-env';
 	import { colorSchemes, MEDIA } from './constants';
 	import { disableAnimation, getSystemTheme, getTheme } from './helpers';
 	import themeStore, { setTheme } from './index';
@@ -91,7 +91,7 @@
 			name = value?.[resolved] || resolved;
 		}
 
-		if (updateDOM && browser) {
+		if (updateDOM && BROWSER) {
 			const d = document.documentElement;
 
 			if (attribute === 'class') {
@@ -130,7 +130,7 @@
 
 	// color-scheme handling
 	run(() => {
-		if (enableColorScheme && browser) {
+		if (enableColorScheme && BROWSER) {
 			let colorScheme =
 				// If theme is forced to light or dark, use that
 				forcedTheme && colorSchemes.includes(forcedTheme)
