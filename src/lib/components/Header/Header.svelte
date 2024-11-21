@@ -1,8 +1,10 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+	
 	import Nav from '../Nav/Nav.svelte';
 	interface Props {
-		title?: import('svelte').Snippet;
-		nav?: import('svelte').Snippet;
+		title?: Snippet;
+		nav?: Snippet;
 	}
 
 	let { title, nav }: Props = $props();
@@ -29,7 +31,7 @@
 </header>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.header {
 		display: flex;

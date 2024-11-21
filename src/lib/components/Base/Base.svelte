@@ -1,7 +1,8 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import SvelteTheme from '../../svelte-themes/SvelteTheme.svelte';
 	interface Props {
-		children?: import('svelte').Snippet;
+		children?: Snippet;
 	}
 
 	let { children }: Props = $props();
@@ -12,8 +13,8 @@
 {@render children?.()}
 
 <style lang="scss" global>
-	@import '../../styles/global';
-	@import '../../styles/utilities/normalize';
+	@use '../../styles/global' as *;
+	@use '../../styles/utilities/normalize';
 
 	html {
 		font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,

@@ -37,7 +37,7 @@
 </div>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.post-navigator-root {
 		@include mx(auto);

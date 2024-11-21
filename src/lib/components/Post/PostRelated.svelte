@@ -5,7 +5,7 @@
 		accent_color?: string;
 		name?: string;
 		url?: string;
-		children?: import('svelte').Snippet;
+		children?: Snippet;
 	}
 
 	let {
@@ -34,7 +34,7 @@
 </Index>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.post-related {
 		display: flex;

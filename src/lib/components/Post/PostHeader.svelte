@@ -97,7 +97,7 @@
 </PageHeader>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.post-header {
 		&__info {

@@ -15,7 +15,7 @@
 </div>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 	.navigation-loading {
 		display: none;
 		position: fixed;

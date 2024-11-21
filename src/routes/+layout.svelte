@@ -11,7 +11,7 @@
 	import NavSearch from '$lib/components/Nav/NavSearch.svelte';
 	import NavigationLoading from '$lib/components/NavigationLoading/NavigationLoading.svelte';
 	interface Props {
-		children?: import('svelte').Snippet;
+		children?: Snippet;
 	}
 
 	let { children }: Props = $props();

@@ -19,7 +19,7 @@
 </div>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.page-header-image {
 		background-color: var(--primary-bg-color);

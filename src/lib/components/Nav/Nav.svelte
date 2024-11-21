@@ -1,7 +1,9 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+	
 	interface Props {
 		shown?: boolean;
-		children?: import('svelte').Snippet;
+		children?: Snippet;
 	}
 
 	let { shown = false, children }: Props = $props();
@@ -12,7 +14,7 @@
 </nav>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 	.nav {
 		list-style-type: none;
 		display: none;

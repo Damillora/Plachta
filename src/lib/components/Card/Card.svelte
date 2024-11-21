@@ -1,7 +1,9 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+	
 	interface Props {
 		hasImage?: boolean;
-		children?: import('svelte').Snippet;
+		children?: Snippet;
 	}
 
 	let { hasImage = false, children }: Props = $props();
@@ -12,7 +14,7 @@
 </div>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.card {
 		border-radius: 20px;

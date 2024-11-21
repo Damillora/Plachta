@@ -14,7 +14,7 @@
 </div>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
     
 	.search-result {
 		background-color: var(--bg-color);

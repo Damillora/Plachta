@@ -22,7 +22,7 @@
 </li>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.nav-search {
 		position: relative;

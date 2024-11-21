@@ -12,7 +12,7 @@
 </div>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.card__banner {
 		border-radius: 20px 20px 0px 0px;

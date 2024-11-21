@@ -1,7 +1,7 @@
 <script lang="ts">
 	interface Props {
-		comments?: import('svelte').Snippet;
-		children?: import('svelte').Snippet;
+		comments?: Snippet;
+		children?: Snippet;
 	}
 
 	let { comments, children }: Props = $props();
@@ -21,7 +21,7 @@
 </div>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.post-main {
 		background-color: var(--bg-color);

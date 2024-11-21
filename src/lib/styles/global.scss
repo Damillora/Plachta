@@ -1,6 +1,6 @@
-    @import "./utilities/responsive";
-    @import "./utilities/spacing";
-    @import "./utilities/shadow";
-    @import "./utilities/transition";
-    @import "./common/font";
-    @import './common/theme';
+@forward "utilities/responsive";
+@forward"utilities/spacing";
+@forward "utilities/shadow";
+@forward "utilities/transition";
+@use "common/font";
+@forward "common/theme";

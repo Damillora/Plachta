@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+	
 	interface Props {
 		background?: string;
 		alt?: string;
@@ -6,7 +8,7 @@
 		sizes?: string | null;
 		halfWidth?: boolean;
 		contentSize?: 'none' | 'short' | 'medium' | 'tall';
-		children?: import('svelte').Snippet;
+		children?: Snippet;
 	}
 
 	let {
@@ -32,7 +34,7 @@
 </div>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.hero {
 		min-height: 150px;

@@ -57,7 +57,7 @@
 </PageHeader>
 
 <style lang="scss">
-	@import '../../styles/global';
+	@use '../../styles/global' as *;
 
 	.author {
 		&__name {
