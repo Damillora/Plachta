@@ -79,14 +79,9 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	p,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@include my(1rem);
+	p {
+		margin-bottom: 1rem;
+		//@include my(1rem);
 	}
 	h1,
 	h2,
@@ -94,6 +89,7 @@
 	h4,
 	h5,
 	h6 {
+		margin-bottom: 0.5rem;
 		font-weight: 300;
 		color: var(--primary-color);
 	}
@@ -148,6 +144,7 @@
 	}
 	ul {
 		list-style-type: disc;
+		margin-bottom: 1rem;
 		li {
 			margin-left: 2rem;
 		}
@@ -160,6 +157,7 @@
 		li {
 			margin-left: 2rem;
 		}
+		margin-bottom: 1rem;
 	}
 	code {
 		background-color: var(--primary-bg-color);

@@ -13,5 +13,6 @@
 		color: var(--primary-color);
 		padding: 1.25rem;
 		border: 1px solid var(--primary-color);
+		margin-bottom: 1rem;
 	}
 </style>

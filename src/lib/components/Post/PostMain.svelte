@@ -1,12 +1,11 @@
 <script lang="ts">
-	export let comments = true;
 </script>
 
 <div class="post-main">
-	<div class:post-main__content={comments == true} class:post-main__single={comments == false}>
+	<div class:post-main__content={true} class:post-main__with-comments={$$slots.comments} class:post-main__without-comments={!$$slots.comments}>
 		<slot />
 	</div>
-	{#if comments == true}
+	{#if $$slots.comments}
 		<div class="post-main__comments">
 			<h1 class="post-main__comments-title">Comments</h1>
 
@@ -27,20 +26,17 @@
 		@include shadow;
 
 		&__content {
-			padding-bottom: 1rem;
-			padding-top: 0.1rem;
+			padding-bottom: 0.1rem;
+			padding-top: 1rem;
 			@include px(1rem);
-			border-radius: 20px 20px 0px 0px;
 			background-color: var(--bg-color);
 			color: var(--text-color);
 		}
-		&__single {
-			padding-bottom: 1rem;
-			padding-top: 0.1rem;
-			@include px(1rem);
+		&__with-comments {
+			border-radius: 20px 20px 0px 0px;
+		}
+		&__without-comments {
 			border-radius: 20px;
-			background-color: var(--bg-color);
-			color: var(--text-color);
 		}
 		&__comments {
 			@include py(1rem);

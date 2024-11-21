@@ -5,8 +5,7 @@
 
 	/* ghost styles */
 	.kg-card {
-		@include py(1rem);
-		@include my(2rem);
+		margin-bottom: 1rem;
 		@include mx(0);
 		display: flex;
 		flex-direction: column;
@@ -22,7 +21,8 @@
 			font-size: $text-sm;
 			background: var(--bg-color);
 			color: var(--highlight-color);
-			padding: 0.25rem 1rem;
+			@include px(1rem);
+			padding-top: 0.25rem;
 			border-radius: 1rem;
 			margin-left: 0.5rem;
 			margin-right: 0.5rem;
@@ -30,7 +30,8 @@
 			@include transition;
 
 			@include screen(md) {
-				padding: 0.5rem 2rem;
+				@include px(2rem);
+				padding-top: 0.5rem;
 			}
 		}
 	}

@@ -23,23 +23,23 @@
 
 <PageHeader>
 	{#if background}
-	<PageHeaderImage background={background} {srcset} {sizes}>
-		
-	</PageHeaderImage>
+		<PageHeaderImage {background} {srcset} {sizes} />
 	{/if}
 	<PageHeaderContents>
 		{#if isPage == false}
 			<div class="post-header__info">
 				{#if primary_tag}
-					{#if primary_tag.accent_color}
-						<span
-							class="post-header__tag-color"
-							style="background-color: {primary_tag.accent_color};"
-						/>
-					{/if}
-					<span class="post-header__tag-name">
-						<a href={primary_tag.url}>{primary_tag.name}</a>
-					</span>
+					<div class="post-header__tag">
+						{#if primary_tag.accent_color}
+							<span
+								class="post-header__tag-color"
+								style="background-color: {primary_tag.accent_color};"
+							/>
+						{/if}
+						<span class="post-header__tag-name">
+							<a href={primary_tag.url}>{primary_tag.name}</a>
+						</span>
+					</div>
 				{/if}
 				<p class="post-header__date">
 					<time datetime={date}>
@@ -90,6 +90,15 @@
 			display: flex;
 			flex-direction: row;
 			align-items: center;
+		}
+		&__tag {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			// @include py(0.25rem);
+			// @include px(0.5rem);
+			// border-radius: 20px;
+			// background-color: var(--primary-bg-color);
 		}
 		&__tag-color {
 			display: inline-block;

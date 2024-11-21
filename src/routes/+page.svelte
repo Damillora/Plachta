@@ -18,10 +18,13 @@
 				<li><a href="/examples/index-page">Index</a></li>
 				<li><a href="/examples/post-page">Post</a></li>
 				<li><a href="/examples/post-image-page">Post with Image</a></li>
+				<li><a href="/examples/post-ghost-page">Post (Ghost)</a></li>
+				<li><a href="/examples/post-image-ghost-page">Post with Image (Ghost)</a></li>
 				<li><a href="/examples/page-page">Page</a></li>
 				<li><a href="/examples/tag-page">Tag</a></li>
 				<li><a href="/examples/author-page">Author</a></li>
 				<li><a href="/examples/card">Card</a></li>
+				<li><a href="/examples/hero">Hero</a></li>
 				<li><a href="/examples/components">Other components</a></li>
 			</ul>
 		</PostMain>

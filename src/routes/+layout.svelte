@@ -34,3 +34,21 @@
 </Base>
 
 <NavigationLoading {loading}/>
+
+<style lang="scss">
+	// Responsive embeds
+	:global(.fluid-width-video-wrapper) {
+		width: 100%;
+		position: relative;
+		padding: 0;
+		:global(iframe),
+		:global(object),
+		:global(embed) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+</style>

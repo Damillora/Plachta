@@ -13,5 +13,8 @@
 		align-items: center;
 		@include px(1rem);
 		@include py(1rem);
+		:global(p) {
+			margin: 0;
+		}
 	}
 </style>
