@@ -254,10 +254,6 @@
 					this post are not really cohesively picked this time...
 				</p>
 			</GhostStyle>
-
-			{#snippet comments()}
-						<svelte:fragment  />
-					{/snippet}
 		</PostMain>
 		<PostNavigator
 			prev_post={{

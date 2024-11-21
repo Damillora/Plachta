@@ -8,10 +8,9 @@
 
 <div class="navigation-loading" class:navigation-loading--loading={loading}>
 	<div class="navigation-loading__background"></div>
-	<div class="navigation-loading__contents">
-		<p>Loading</p>
+	<div class="navigation-loading__loading">
+		<div class="navigation-loading__loading-icon"></div>
 	</div>
-	<div class="navigation-loading__loading"></div>
 </div>
 
 <style lang="scss">
@@ -35,54 +34,24 @@
 			width: 100vw;
 			height: 100vh;
 		}
-		&__contents {
-			color: var(--primary-color);
-			position: fixed;
-			bottom: 40vh;
-			width: 100vw;
-			font-size: $text-4xl;
-			margin-left: auto;
-			margin-right: auto;
-			left: 0;
-			right: 0;
-			text-align: center;
-		}
 		&__loading {
-			background-color: var(--primary-color);
 			position: fixed;
-			bottom: 50vh;
-			width: 2rem;
-			height: 2rem;
-			left: 30vw;
-
-			animation: loadinganim 2s infinite;
-
-			@include screen(md) {
-				animation: loadinganimdesktop 2s infinite;
-			}
+			bottom: calc(50vh - 2rem);
+			left: calc(50vw - 2rem);
+			width: 4rem;
+			height: 4rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
-	}
-
-	@keyframes loadinganim {
-		0% {
-			left: calc(30vw - 2rem);
+		&__loading-icon {
+			width: 4rem;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			border: 0.5rem solid var(--highlight-bg-color);
+			border-right-color: var(--highlight-color);
+			animation: l2 1s infinite linear;
 		}
-		50% {
-			left: 70vw;
-		}
-		100% {
-			left: calc(30vw - 2rem);
-		}
-	}
-	@keyframes loadinganimdesktop {
-		0% {
-			left: calc(40vw - 2rem);
-		}
-		50% {
-			left: 60vw;
-		}
-		100% {
-			left: calc(40vw - 2rem);
-		}
+		@keyframes l2 {to{transform: rotate(1turn)}}
 	}
 </style>

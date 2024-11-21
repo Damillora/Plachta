@@ -204,10 +204,6 @@
 			<p><em>Free at last! Free at last!</em></p>
 			<p><em>Thank God Almighty, we are free at last!</em></p>
 			<!--kg-card-end: markdown-->
-
-			{#snippet comments()}
-						<svelte:fragment  />
-					{/snippet}
 		</PostMain>
 		<PostNavigator
 			prev_post={{

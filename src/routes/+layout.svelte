@@ -10,6 +10,7 @@
 	import NavMenu from '$lib/components/Nav/NavMenu.svelte';
 	import NavSearch from '$lib/components/Nav/NavSearch.svelte';
 	import NavigationLoading from '$lib/components/NavigationLoading/NavigationLoading.svelte';
+	import type { Snippet } from 'svelte';
 	interface Props {
 		children?: Snippet;
 	}
