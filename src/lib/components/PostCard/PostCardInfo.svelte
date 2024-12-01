@@ -23,8 +23,10 @@
 		<time datetime={date}>
 			{date}
 		</time>
+		{#if reading_time}
 		<span class="bull">&bull;</span>
 		{reading_time}
+		{/if}
 	</p>
 </div>
 
