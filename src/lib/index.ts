@@ -1,6 +1,7 @@
 // Base
 import Base from './components/Base/Base.svelte';
 import GhostStyle from './components/Base/GhostStyle.svelte';
+import PostStyle from './components/Base/PostStyle.svelte';
 
 // Card
 import Card from './components/Card/Card.svelte';
@@ -64,7 +65,7 @@ import PostCardInfo from './components/PostCard/PostCardInfo.svelte';
 import SearchCard from './components/PostCard/SearchCard.svelte';
 
 export {
-    Base, GhostStyle,
+    Base, GhostStyle, PostStyle,
     Card, CardBanner, CardContent, CardDescription, CardFooter, CardTitle,
     CardList,
     Container,
