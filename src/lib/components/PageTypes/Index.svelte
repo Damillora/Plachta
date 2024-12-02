@@ -16,6 +16,6 @@
 	@use '../../styles/global' as *;
 	.index {
 		@include my(2rem);
-		@include px(1rem);
+		@include px(1.5rem);
 	}
 </style>

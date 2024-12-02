@@ -57,7 +57,7 @@
 				}
 			]}
 			date="2022 November 2020"
-			excerpt="Sophie!"
+			excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat, nisl sit amet porttitor commodo, metus arcu iaculis mauris, quis pharetra nisi lorem a lectus. Nullam commodo ante vitae ante faucibus, in facilisis libero dignissim. Aliquam sagittis arcu ac enim"
 			feature_image="https://images.nanao.moe/r/7jETH3.png"
 			primary_tag={{
 				accent_color: '#3b7b9c',

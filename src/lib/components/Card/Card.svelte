@@ -24,12 +24,14 @@
 		
 		&--image {
 			display: grid;
-			grid-template-rows: 150px 1fr;
+			grid-template-rows: 37vw 1fr;
 			grid-template-columns: 1fr;
-
+			@include screen(sm) {
+				grid-template-rows: 236.8px 1fr;
+			}
 			@include screen(md) {
 				grid-template-rows: 1fr;
-				grid-template-columns: 300px 6fr;
+				grid-template-columns: 18.75rem 6fr; //332.5px in 16px rem
 			}
 		}
 	}

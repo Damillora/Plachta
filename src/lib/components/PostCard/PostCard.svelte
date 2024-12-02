@@ -80,7 +80,8 @@
 			font-size: $text-sm;
 		}
         &__excerpt {
-            min-height: 5rem;
+            min-height: 6rem;
+			margin-bottom: 0.75rem;
         }
 	}
 </style>

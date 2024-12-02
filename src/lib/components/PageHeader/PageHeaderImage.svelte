@@ -40,8 +40,14 @@
 
 		&__image {
 			width: 100%;
-			max-height: 40vw;
+			max-height: 37vw;
 			object-fit: cover;
+			@include screen(sm) {
+				height: 236.8px;
+			}
+			@include screen(lg) {
+				height: 284.14px;
+			}
 		}
 	}
 </style>
